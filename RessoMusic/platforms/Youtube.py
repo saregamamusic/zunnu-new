@@ -10,7 +10,10 @@ from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
 from RessoMusic.utils.database import is_on_off
 from RessoMusic.utils.formatters import time_to_seconds
+
+from AnonXMusic import LOGGER
 from config import YT_API_KEY, YTPROXY_URL as YTPROXY
+
 import os
 import glob
 import random
@@ -22,6 +25,12 @@ import os
 import random
 
 
+def cookie_txt_file():
+    cookie_dir = "RessoMusic/cookies"
+    cookies_files = [f for f in os.listdir(cookie_dir) if f.endswith(".txt")]
+
+    cookie_file = os.path.join(cookie_dir, random.choice(cookies_files))
+    return cookie_file
 
 
 async def check_file_size(link):
