@@ -11,7 +11,7 @@ from youtubesearchpython.__future__ import VideosSearch
 from RessoMusic.utils.database import is_on_off
 from RessoMusic.utils.formatters import time_to_seconds
 
-from AnonXMusic import LOGGER
+from RessoMusic import LOGGER
 from config import YT_API_KEY, YTPROXY_URL as YTPROXY
 
 import os
